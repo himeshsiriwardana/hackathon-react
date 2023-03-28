@@ -11,6 +11,7 @@ export const Login = (props) => {
     const [error, setError] = useState('');
 
     const login = (e) => {
+        console.log()
         e.preventDefault();
         auth.signInWithEmailAndPassword(email, password).then(() => {
             setEmail('');

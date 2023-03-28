@@ -17,6 +17,8 @@ export const Navbar = ({ user }) => {
         })
     }
 
+    console.log({user})
+
     return (
         <div className='navbox'>
             <div className='leftside'>

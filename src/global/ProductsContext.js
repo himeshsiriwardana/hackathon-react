@@ -3,7 +3,7 @@ import { db } from '../config/Config'
 
 export const ProductsContext = createContext();
 
-export class ProductscontextProvider extends React.Component {
+export class ProductsContextProvider extends React.Component {
 
     //define empty array of products
 
