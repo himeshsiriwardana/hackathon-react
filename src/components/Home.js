@@ -1,22 +1,21 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import '../css/Home.css'
 import { Navbar } from './Navbar';
 import { Products } from './Products'
-import { useHistory } from 'react-router-dom'
-import { auth } from '../config/Config'
+
 
 export const Home = ({ user }) => {
 
-    const history = useHistory();
+    // const history = useHistory();
 
-    useEffect(() => {
-        // forcing user to signup
-        auth.onAuthStateChanged(user => {
-            if (!user) {
-                history.push('/login');
-            }
-        })
-    })
+    // useEffect(() => {
+    //     // forcing user to signup
+    //     auth.onAuthStateChanged(user => {
+    //         if (!user) {
+    //             history.push('/login');
+    //         }
+    //     })
+    // })
 
     return (
         <div className='wrapper'>

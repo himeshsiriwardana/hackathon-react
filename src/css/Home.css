@@ -29,7 +29,8 @@
 
 .navbox .rightside {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
+    position: relative;
 }
 
 
@@ -38,6 +39,24 @@
     color: #000;
     font-weight: 600;
     margin: auto 10px;
+}
+
+
+.navbox .rightside .no-of-products {
+    background: #f57224;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    position: absolute;
+    top: -5px;
+    left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -123,3 +142,4 @@ h1 {
     background-color: #2eca8b;
     margin-left: 10px;
 }
+
