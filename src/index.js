@@ -7,11 +7,12 @@ import 'bootstrap/dist/css/bootstrap.css'
 import { AuthProvider } from "@asgardeo/auth-react";
 
 const config = {
-    signInRedirectURL: "http://localhost:3000/login",
-    signOutRedirectURL: "http://localhost:3000/logout",
+    signInRedirectURL: "http://localhost:3000/",
+    signOutRedirectURL: "http://localhost:3000/",
     clientID: "5IT1_bqbYco8iJ2UfXs2FpCbTnca",
     baseUrl: "https://api.asgardeo.io/t/himeshdevinda",
-    scope: [ "openid","profile" ]
+    scope: [ "openid","profile" ],
+    storage: "sessionStorage"
 };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

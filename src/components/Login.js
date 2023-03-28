@@ -7,10 +7,10 @@ import { useAuthContext } from "@asgardeo/auth-react";
 
 export const Login = (props) => {
 
-    const { state, signIn, signOut } = useAuthContext();
+    const { state, signIn } = useAuthContext();
     // const [email, setEmail] = useState('');
     // const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
+     const [error, setError] = useState('');
 
     // const login = (e) => {
     //     console.log()
@@ -41,9 +41,9 @@ export const Login = (props) => {
             {/* </form> */}
             {error && <span className='error-msg'>{error}</span>}
             <br/>
-            <span>Don't have an account? Register
+            {/* <span>Don't have an account? Register
                 <Link to="signup"> Here</Link>
-            </span>
+            </span> */}
         </div>
     )
 }

@@ -8,54 +8,33 @@ import { auth, db } from './config/Config'
 import { AddProducts } from './components/AddProducts'
 import { CartContextProvider } from './global/CartContext'
 import { Cart } from './components/Cart'
+import { useAuthContext } from "@asgardeo/auth-react";
+import { UserInfo } from './components/UserInfo'
 
-export class App extends Component {
+function App() {
 
-    state = {
-        user: null,
-    }
+  const { state } = useAuthContext();
 
-    componentDidMount() {
-
-        // getting user info for navigation bar
-        auth.onAuthStateChanged(user => {
-            if (user) {
-                db.collection('SignedUpUsersData').doc(user.uid).get().then(snapshot => {
-                    this.setState({
-                        user: snapshot.data().Name
-                    })
-                })
-            }
-            else {
-                this.setState({
-                    user: null
-                })
-            }
-        })
-
-    }
-
-    render() {
         return (
             <ProductsContextProvider>
               <CartContextProvider>
                     <BrowserRouter>
                         <Switch>
                             {/* home */}
-                            <Route exact path='/' component={() => <Home user={this.state.user} />} />
+                            <Route exact path='/' component={() => <Home user={state.username}/>} />
                             {/* signup */}
                             <Route path="/signup" component={Signup} />
                             {/* login */}
                             <Route path="/login" component={Login} />
                             {/* add products */}
                             <Route path="/addproducts" component={AddProducts} />
-                            <Route path="/cartproducts" component={() => <Cart user={this.state.user}></Cart>} />
+                            <Route path="/cartproducts" component={() => <Cart user={state.username} />} />
+                            <Route path="/userinfo" component={UserInfo} />
                         </Switch>
                     </BrowserRouter>
               </CartContextProvider>
             </ProductsContextProvider>
         )
-    }
 }
 
 export default App

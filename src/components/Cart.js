@@ -13,15 +13,15 @@ export const Cart = ({ user }) => {
 
     const { shoppingCart, dispatch, totalPrice, totalQty } = useContext(CartContext);
 
-    const history = useHistory();
+    // const history = useHistory();
 
-    useEffect(() => {
-        auth.onAuthStateChanged(user => {
-            if (!user) {
-                history.push('/login');
-            }
-        })
-    })
+    // useEffect(() => {
+    //     auth.onAuthStateChanged(user => {
+    //         if (!user) {
+    //             history.push('/login');
+    //         }
+    //     })
+    // })
 
     return (
         <>
