@@ -4,12 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css'
+import { AuthProvider } from "@asgardeo/auth-react";
+
+const config = {
+    signInRedirectURL: "http://localhost:3000/login",
+    signOutRedirectURL: "http://localhost:3000/logout",
+    clientID: "5IT1_bqbYco8iJ2UfXs2FpCbTnca",
+    baseUrl: "https://api.asgardeo.io/t/himeshdevinda",
+    scope: [ "openid","profile" ]
+};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-    <App />
-
+    <AuthProvider config={ config }>
+        <App />
+    </AuthProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
