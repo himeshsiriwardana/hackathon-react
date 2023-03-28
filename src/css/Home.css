@@ -32,12 +32,14 @@
     flex-direction: row; 
 }
 
-.navbox .rightside .navlinks {
+
+.navbox .rightside .navlink {
     font-size: 12px;
     color: #000;
     font-weight: 600;
     margin: auto 10px;
 }
+
 
 h1 {
     padding: 30px;
@@ -107,4 +109,17 @@ h1 {
     margin-top: 5px;
     margin-bottom: 2px;
     outline: none;
+}
+
+.logout-btn {
+    padding: 5px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    border: hidden;
+    background-color: #2eca8b;
+    margin-left: 10px;
 }
