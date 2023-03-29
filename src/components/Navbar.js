@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react'
-import logo from '../images/ecommerce.svg'
+import logo from '../images/kfone.png'
 import { Link } from 'react-router-dom'
 import { auth } from '../config/Config'
 import { Icon } from 'react-icons-kit'
