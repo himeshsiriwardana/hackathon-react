@@ -11,7 +11,7 @@ const config = {
     signOutRedirectURL: "http://localhost:3000/",
     clientID: "5IT1_bqbYco8iJ2UfXs2FpCbTnca",
     baseUrl: "https://api.asgardeo.io/t/himeshdevinda",
-    scope: [ "openid","profile" ],
+    scope: [ "openid","profile", "groups" ],
     storage: "sessionStorage"
 };
 
