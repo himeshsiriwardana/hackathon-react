@@ -35,6 +35,7 @@ export const Navbar = ({ user }) => {
             {!state.isAuthenticated && <div className='rightside'>
                 {/* <span><Link to="signup" className='navlink'>SIGN UP</Link></span> */}
                 <span><button className='logout-btn' onClick={ () => signIn() }>Login</button></span>
+                
             </div>}
             {state.isAuthenticated && <div className='rightside'>
                 <span><Link to="userinfo" className='navlink'>User info</Link></span>

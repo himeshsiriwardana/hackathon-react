@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useAuthContext } from '@asgardeo/auth-react';
 
 export function UserInfo() {
@@ -6,10 +6,12 @@ export function UserInfo() {
   const [tokenInfo, setTokenInfo] = useState('');
   const [error, setError] = useState('');
 
-  getDecodedIDToken().then((decodedIDToken) => {
-      console.log(decodedIDToken);
-    setTokenInfo(decodedIDToken);
-    }).catch((error) => { setError(error)})
+  useEffect (() => {
+    getDecodedIDToken().then((decodedIDToken) => {
+        console.log(decodedIDToken);
+      setTokenInfo(decodedIDToken);
+      }).catch((error) => { setError(error)})
+  }) 
 
     const keys = Object.keys(tokenInfo);
 
